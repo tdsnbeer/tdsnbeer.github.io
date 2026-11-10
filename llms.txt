@@ -1,0 +1,13 @@
+# Workbench Notes
+
+> Field notes from a laptop where an AI assistant and local models do the work.
+
+## Posts
+
+- [The laptop is the factory, the edge is the storefront](https://tdsnbeer.github.io/posts/factory-and-storefront.html): Why a capable home machine should build everything and serve nothing.
+- [Don't let a model pick its own score](https://tdsnbeer.github.io/posts/models-should-not-score.html): Ask a model yes-or-no questions, compute the score in code, and test the judge on cases you already know.
+- [A publishing gate an assistant can't talk its way past](https://tdsnbeer.github.io/posts/publishing-gate.html): How an AI assistant is allowed to put pages on the public web without being trusted to decide alone.
+
+## Pages
+
+- [About](https://tdsnbeer.github.io/about.html)

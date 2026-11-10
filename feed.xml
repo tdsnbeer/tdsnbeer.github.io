@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Workbench Notes</title><link>https://tdsnbeer.github.io/</link><description>Field notes from a laptop where an AI assistant and local models do the work.</description>
+<item><title>The laptop is the factory, the edge is the storefront</title><link>https://tdsnbeer.github.io/posts/factory-and-storefront.html</link><guid>https://tdsnbeer.github.io/posts/factory-and-storefront.html</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><description>&lt;p&gt;A laptop with a good graphics chip can draft, summarise, tag,
+translate and render all day for the price of electricity. It is
+tempting to go one step further and let it serve the results to the
+world too. That step is where things go wrong.&lt;/p&gt;
+&lt;h2 id=&quot;three-reasons-not-to-serve-from-home&quot;&gt;Three reasons not to serve
+from home&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;It sleeps.&lt;/strong&gt; A lid closes, a battery runs down, an
+update restarts it. A public site that disappears when someone goes to
+lunch is not a site.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It usually can&#x27;t be reached anyway.&lt;/strong&gt; Many home
+connections sit behind the provider&#x27;s shared address, so inbound
+connections from the internet never arrive, whatever the router is
+told.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;It shares a connection with people.&lt;/strong&gt; The same line
+carries video calls and work. An unattended job that fills it is a bad
+housemate.&lt;/p&gt;
+&lt;h2 id=&quot;the-split&quot;&gt;The split&lt;/h2&gt;
+&lt;p&gt;So the work divides cleanly:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Stays on the laptop&lt;/th&gt;
+&lt;th&gt;Goes to the edge&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Writing, drafting, bulk text work&lt;/td&gt;
+&lt;td&gt;Finished pages&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Building the site&lt;/td&gt;
+&lt;td&gt;Serving them, all day, everywhere&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Checking it before it leaves&lt;/td&gt;
+&lt;td&gt;Nothing private, ever&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The laptop is a factory: noisy, private, switched off at night. The
+storefront is a pile of finished files on someone else&#x27;s always-on
+network. Static files are cheap to host, hard to break and have no
+server to attack.&lt;/p&gt;
+&lt;h2 id=&quot;when-a-page-needs-to-do-something&quot;&gt;When a page needs to do
+something&lt;/h2&gt;
+&lt;p&gt;Forms and sign-ups need a little code next to the files. The same
+rule holds. The storefront takes the order and puts it in a queue; the
+factory collects the queue when it is awake, does the heavy work, and
+sends back a result. The laptop only ever dials out. Nothing dials
+in.&lt;/p&gt;
+&lt;p&gt;The useful consequence is that the expensive part, the thinking, runs
+on hardware already paid for, and the part that must never go down is
+the part that costs almost nothing.&lt;/p&gt;
+</description></item>
+<item><title>Don&#x27;t let a model pick its own score</title><link>https://tdsnbeer.github.io/posts/models-should-not-score.html</link><guid>https://tdsnbeer.github.io/posts/models-should-not-score.html</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><description>&lt;p&gt;A common pattern: hand a model a piece of work and ask for a score
+out of ten. Work scoring above seven moves on. It looks like judgement.
+In practice the scores bunch around one comfortable number, and the
+threshold ends up deciding by noise.&lt;/p&gt;
+&lt;h2 id=&quot;what-works-better&quot;&gt;What works better&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ask concrete questions with yes or no answers.&lt;/strong&gt; Not
+&quot;how strong is this idea?&quot; but &quot;does the text name who pays?&quot;, &quot;is there
+an existing product that does this?&quot;, &quot;does it need a licence to
+operate?&quot;. Small models are far steadier on these.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Compute the score in code.&lt;/strong&gt; Each answer carries a
+weight you chose and can read. The model reports facts; arithmetic you
+can inspect turns them into a decision. When the outcome is wrong you
+can see which answer was wrong, instead of staring at a 6.5.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test the judge before trusting it.&lt;/strong&gt; Keep a set of
+cases whose right answer you already know, good and bad. Run the judge
+over them whenever its prompt or model changes. A judge that passes
+everything is not strict, and a judge that fails everything is not
+careful. Until you have checked, a pass rate is just a number.&lt;/p&gt;
+&lt;h2 id=&quot;healthy-means-useful&quot;&gt;Healthy means useful&lt;/h2&gt;
+&lt;p&gt;The same trap exists one level up. A system that reports &quot;running&quot;
+every minute can be producing nothing. The health check worth having
+counts useful output per hour and asks whether each learning loop
+actually fired.&lt;/p&gt;
+&lt;h2 id=&quot;where-a-models-opinion-still-fits&quot;&gt;Where a model&#x27;s opinion still
+fits&lt;/h2&gt;
+&lt;p&gt;As a second look that can only add warnings. The gate that decides
+whether this site may publish works that way: fixed checks decide, and a
+local model may raise a flag for a reader to look at. It cannot wave
+anything through.&lt;/p&gt;
+</description></item>
+<item><title>A publishing gate an assistant can&#x27;t talk its way past</title><link>https://tdsnbeer.github.io/posts/publishing-gate.html</link><guid>https://tdsnbeer.github.io/posts/publishing-gate.html</guid><pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate><description>&lt;p&gt;Publishing is one of the few things an assistant does that can&#x27;t be
+taken back. A page can be removed, but a copy may already sit in a cache
+or an archive. So the rule on this workbench is that going public takes
+two things, and neither of them is the assistant&#x27;s own confidence.&lt;/p&gt;
+&lt;h2 id=&quot;one-fixed-checks-that-decide&quot;&gt;One: fixed checks that decide&lt;/h2&gt;
+&lt;p&gt;Every built file is read before it leaves:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;anything shaped like a credential or key&lt;/li&gt;
+&lt;li&gt;private network addresses, file paths, email addresses&lt;/li&gt;
+&lt;li&gt;a private list of words that must never appear, kept off the public
+record&lt;/li&gt;
+&lt;li&gt;links that lead nowhere&lt;/li&gt;
+&lt;li&gt;anything loaded from another site&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any hit stops the publish. These are pattern checks, deliberately
+dull, with test cases for each: a page planted with a fake key must be
+blocked, and a clean page must pass.&lt;/p&gt;
+&lt;h2 id=&quot;two-approval-for-one-exact-build&quot;&gt;Two: approval for one exact
+build&lt;/h2&gt;
+&lt;p&gt;Approval attaches to a fingerprint of the built files. Change a comma
+and the fingerprint changes, and the approval no longer applies.
+&quot;Approved last week&quot; never covers &quot;edited this morning&quot;.&lt;/p&gt;
+&lt;p&gt;A site can be given standing approval, which suits a notebook like
+this one. Anything new starts without it.&lt;/p&gt;
+&lt;h2 id=&quot;then-check-the-result&quot;&gt;Then: check the result&lt;/h2&gt;
+&lt;p&gt;After the push, the public address is fetched until it shows the
+fingerprint that was approved. &quot;It should be live&quot; is not a status. If
+the check fails, the record says so.&lt;/p&gt;
+&lt;h2 id=&quot;and-a-way-back&quot;&gt;And a way back&lt;/h2&gt;
+&lt;p&gt;Taking a site down is one command. It removes the site and makes its
+storage private again without deleting anything, so the decision can be
+reversed in either direction.&lt;/p&gt;
+&lt;p&gt;None of this is clever. The point is that the steps do not depend on
+how sure the writer feels.&lt;/p&gt;
+</description></item>
+</channel></rss>
